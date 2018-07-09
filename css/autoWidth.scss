@@ -1,0 +1,10 @@
+$vw_base:375;
+@function vw($px){
+  @return ($px/$vw_base)*100vw;
+};
+@function vwCovert($px){
+  @return (($vw_base-$px)/$vw_base)*100vw;
+};
+@function setVW_base($newVw_base){
+  $vw_base:$newVw_base;
+}
