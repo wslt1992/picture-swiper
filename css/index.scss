@@ -6,104 +6,28 @@ $vw_base:780;
 //     max-width: 50%;
 // }
 
-body{
-    // display:none;
-}
-.divider-line{
-    border-top: 1px solid #e5e5e5;
-}
-
-.button{
-    width: vw(780);
-}
-// .swiper-container {
-//     height: vw(250);
-//     width: vw(780);
-//     .swiper-wrapper {
-        
-//          img {
-//             display: block;
-//             height: vw(250);
-//             width: 100%;
-//         }
-//     }
-//     .swiper-pagination{
-//         .swiper-pagination-bullet{
-//             background-color: #ffffff;
-//             opacity: 0.8;
-//         } 
-//         .swiper-pagination-bullet-active{
-//             background-color: #fc7a03;
-//         }
-//     }
-// }
-
-.shopOne{
-    margin: 0 vw(16);
-    img{
-        height: vw(180);
-        width:vw(180);
-        vertical-align:bottom;
-    }
-    div.shopDetail{
-        margin: vw(20) 0;
-        display: flex;
-        .shopDetail-right{
-            display: inline-block;
-            flex-grow: 1;
-            padding-left: vw(10);
-            h2{
-                font-size: vw(24);
-                color: #191919;
-            }
-            h1{
-                margin: vw(20) 0;
-                font-size: vw(28);
-                color: #fc7a03;
-            }
-            span{
-                color: #999999;
-                font-size: vw(20);
-            }
-        }
-
-        
-    }
-
-    .shop-num{
-        height: vw(100);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-size: vw(24);
-        .button{
-            display: inline-block;
-            width: vw(160);
-            height: vw(60);
-            border-radius: vw(6);
-            font-size: vw(26);
-            line-height: vw(60);
-            text-align: center;
-            color: #ffffff;
-            background: #fc7a03;
-            cursor: pointer;
-
-        }
-    }
+html, body {
+    position: relative;
+    height: 100%;
+  }
+  body {
+    background: #000;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color:#000;
+    margin: 0;
+    padding: 0;
+    width: 600px;
+  }
+  .swiper-container {
     
-
-    
-    
-}
-
-
-.swiper-container {
-    width: 100%;
+    width: 500px;;
     height: 300px;
     margin-left: auto;
     margin-right: auto;
   }
   .swiper-slide {
+      width: 500px;
     background-size: cover;
     background-position: center;
   }
@@ -124,3 +48,15 @@ body{
   .gallery-thumbs .swiper-slide-active {
     opacity: 1;
   }
+.swiper-button-next{
+    // margin-right: -100px;
+}
+
+
+.swiper-slide{
+    // margin:0 100px;
+
+}
+.swiper-wrapper{
+    // width:80%;
+}
