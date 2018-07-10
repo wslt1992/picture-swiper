@@ -49,7 +49,7 @@ class ltSwiper{
      * @param {显示被查看图片的地址} src 
      */
     showImage(src){
-        this.lt_swiper_show_image.css({'background':`url(${src}) no-repeat fixed top`,"background-size":"cover"})
+        this.lt_swiper_show_image.css({'background-image':`url(${src})`})
     }
     //计算图片包裹容器宽swiper_wrapper
     jisuanSwiper_wrapperWidth(){
