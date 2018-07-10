@@ -1,6 +1,7 @@
 // import 'babel-polyfill';
-import '../css/index.scss';
-import "normalize.css";
+import "../font/base.css"
+import '../css/ltSwiper.scss';
+// import "normalize.css";
 // import "../../semantic/dist/semantic.css";
 import "layui-src/dist/css/layui.css";
 import "layui-src/dist/css/layui.mobile.css";
@@ -18,7 +19,7 @@ window.reset_vw_base(780);
 import {ltSwiper} from './lt-swiper';
 
 
-var galleryTop = new ltSwiper();
+var galleryTop = new $.fn.ltSwiper();
 
 
 

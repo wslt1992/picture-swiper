@@ -1,3 +1,4 @@
+
 class ltSwiper {
     constructor() {
         this.init();
@@ -126,3 +127,4 @@ class ltSwiper {
 export {
     ltSwiper
 };
+$.fn.extend({"ltSwiper":ltSwiper});
