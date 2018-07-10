@@ -83,6 +83,7 @@ class ltSwiper{
     qiehuanyiping(fuhao){
         
         let  rootSwiperWidth= this.baoguo.innerWidth();
+        // let  rootSwiperWidth= this.baoguo.innerWidth()+parseInt(this.baoguo.css("marginLeft"))*2;
         // let margin_left = parseInt(this.swiper_wrapper.css('marginLeft'));
         if(fuhao==='-'){
             this.currPosition -= rootSwiperWidth;
