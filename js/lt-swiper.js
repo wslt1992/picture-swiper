@@ -22,8 +22,15 @@ class ltSwiper{
 
         this.fumax = -32768;
         this.zhengmax = -32768;
+        this.initView();
         this.initOn();
         this.jisuanSwiper_wrapperWidth();
+    }
+    /**
+     * 设置默认的显示的图片
+     */
+    initView(){
+        this.showImage(this.imgs[0].src);
     }
     initOn(){
         // this.swiper_button_next.on('click');
@@ -33,10 +40,17 @@ class ltSwiper{
 
         this.imgs.on('click',(a,b,c)=>{
             let src = a.target.currentSrc;
-            this.lt_swiper_show_image.css({'background':`url(${src}) no-repeat fixed top`,"background-size":"cover"})
+            this.showImage(src);
         })
     }
 
+    /**
+     * 
+     * @param {显示被查看图片的地址} src 
+     */
+    showImage(src){
+        this.lt_swiper_show_image.css({'background':`url(${src}) no-repeat fixed top`,"background-size":"cover"})
+    }
     //计算图片包裹容器宽swiper_wrapper
     jisuanSwiper_wrapperWidth(){
         let self = this;
