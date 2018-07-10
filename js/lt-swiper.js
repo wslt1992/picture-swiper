@@ -18,7 +18,7 @@ class ltSwiper{
         this.lt_swiper_show_image = $(".lt-swiper-show-image");
 
         
-        this.currindex = 5;
+        this.currindex = 0;
 
         this.fumax = -32768;
         this.zhengmax = -32768;
@@ -38,18 +38,21 @@ class ltSwiper{
         this.swiper_button_prev.on('click',this.leftSlide.bind(this));
         this.swiper_button_next.on('click',this.rightSlide.bind(this));
 
-        this.imgs.on('click',(a,b,c)=>{
+        this.imgs.click((a,b,c)=>{
             let src = a.target.currentSrc;
+            this.imgSelected(a.target);
             this.showImage(src);
         })
     }
-
+    imgSelected(element){
+        $(element).addClass("selected").siblings().removeClass("selected");
+    }
     /**
      * 
      * @param {显示被查看图片的地址} src 
      */
     showImage(src){
-        this.lt_swiper_show_image.css({'background-image':`url(${src})`})
+        this.lt_swiper_show_image.css({'background-image':`url(${src})`});
     }
     //计算图片包裹容器宽swiper_wrapper
     jisuanSwiper_wrapperWidth(){
@@ -87,7 +90,9 @@ class ltSwiper{
             margin_left += rootSwiperWidth;
             this.currindex +=1;
         }
+
         margin_left = this.jisuanbianjie(margin_left);
+        
         this.swiper_wrapper.css({"margin-left":margin_left+"px"})
         console.log("leftSlide");
         //2.index-1  显示出来
