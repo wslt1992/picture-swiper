@@ -65,8 +65,8 @@ class ltSwiper{
         let totalWidth = oneWidth*length+oneMargin*2*length;
 
         //最大负max
-        let  rootSwiperWidth=this.rootSwiper.innerWidth();
-         this.fumax = rootSwiperWidth-totalWidth;
+        let  rootBaoguoWidth=this.baoguo.innerWidth();
+         this.fumax = rootBaoguoWidth-totalWidth;
         //最大max
          this.zhengmax = 0;
     }
