@@ -98,9 +98,12 @@ class ltSwiper {
 
         this.currPosition = this.jisuanbianjie(this.currPosition);
 
-        this.swiper_wrapper.css({
+        // this.swiper_wrapper.css({
+        //     "margin-left": this.currPosition + "px"
+        // })
+        this.swiper_wrapper.animate({
             "margin-left": this.currPosition + "px"
-        })
+        },"normal",'linear')
         console.log("leftSlide");
         //2.index-1  显示出来
 
