@@ -19,7 +19,7 @@ class ltSwiper{
 
         
         this.currindex = 0;
-
+        this.currPosition =0;
         this.fumax = -32768;
         this.zhengmax = -32768;
         this.initView();
@@ -82,18 +82,18 @@ class ltSwiper{
     qiehuanyiping(fuhao){
         
         let  rootSwiperWidth= this.rootSwiper.innerWidth();
-        let margin_left = parseInt(this.swiper_wrapper.css('marginLeft'));
+        // let margin_left = parseInt(this.swiper_wrapper.css('marginLeft'));
         if(fuhao==='-'){
-            margin_left -= rootSwiperWidth;
+            this.currPosition -= rootSwiperWidth;
             this.currindex -=1;
         }else if(fuhao==='+'){
-            margin_left += rootSwiperWidth;
+            this.currPosition += rootSwiperWidth;
             this.currindex +=1;
         }
 
-        margin_left = this.jisuanbianjie(margin_left);
+        this.currPosition = this.jisuanbianjie(this.currPosition);
         
-        this.swiper_wrapper.css({"margin-left":margin_left+"px"})
+        this.swiper_wrapper.css({"margin-left":this.currPosition+"px"})
         console.log("leftSlide");
         //2.index-1  显示出来
         
