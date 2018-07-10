@@ -39,8 +39,9 @@ class ltSwiper {
         this.swiper_button_prev.on('click', this.leftSlide.bind(this));
         this.swiper_button_next.on('click', this.rightSlide.bind(this));
 
-        this.imgs.click((a, b, c) => {
-            let src = a.target.currentSrc;
+        this.imgs.click((a) => {
+            let src = $(a.currentTarget).attr("src");
+
             this.imgSelected(a.target);
             this.showImage(src);
         })
