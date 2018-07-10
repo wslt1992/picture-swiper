@@ -6,33 +6,39 @@ $vw_base:780;
 //     max-width: 50%;
 // }
 .lt-swiper-show-all-images {
-  width: 900px;
+  width: 972px;
   .lt-swiper-container {
     background-color: black;
     position: relative; // padding:0 30px;
     overflow: hidden;
-    .lt-swiper-wrapper {
-      // overflow: scroll;
-      position: relative; // 图片大小
-      width: 10000px;
-      // height: 200px;
-      font-size: 0;
-      transition: margin-left 0.5s;
-      img {
-        // display: none;
-        position: relative;
-        box-sizing: border-box; // top: 0;
-        // left: 0;
-        width: 144px;
-        height: 86px;
-        // padding: 0 20px;
-        margin: 0 4px;
-        border:4px solid rgba(0, 0, 0, 0);
-      }
-      .selected{
-        border:4px solid #0099ff;
+    .baoguo{
+      margin: 0 30px;
+      overflow: hidden;
+      .lt-swiper-wrapper {
+      
+        
+        position: relative; // 图片大小
+        width: 10000px;
+        // height: 200px;
+        font-size: 0;
+        transition: margin-left 0.5s;
+        img {
+          // display: none;
+          position: relative;
+          box-sizing: border-box; // top: 0;
+          // left: 0;
+          width: 144px;
+          height: 86px;
+          // padding: 0 20px;
+          margin: 0 4px;
+          border:4px solid rgba(0, 0, 0, 0);
+        }
+        .selected{
+          border:4px solid #0099ff;
+        }
       }
     }
+    
   }
   .lt-swiper-show-image {
     // background-color: aqua;

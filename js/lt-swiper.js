@@ -11,6 +11,7 @@ class ltSwiper{
 
 
         this.rootSwiper = $(".lt-swiper-container");
+        this.baoguo = $(".baoguo");
         this.swiper_wrapper = $(".lt-swiper-wrapper");
 
         this.imgs = $(".lt-swiper-wrapper img");
@@ -81,7 +82,7 @@ class ltSwiper{
     //计算边界
     qiehuanyiping(fuhao){
         
-        let  rootSwiperWidth= this.rootSwiper.innerWidth();
+        let  rootSwiperWidth= this.baoguo.innerWidth();
         // let margin_left = parseInt(this.swiper_wrapper.css('marginLeft'));
         if(fuhao==='-'){
             this.currPosition -= rootSwiperWidth;
