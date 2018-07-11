@@ -1,6 +1,11 @@
+// ltSwiper.defaule = {}
+// Objcet.assign();
 
 class ltSwiper {
-    constructor() {
+    
+
+    constructor(args) {
+
         this.init();
     }
 
@@ -18,6 +23,7 @@ class ltSwiper {
         this.baoguo = $(".baoguo");
         this.swiper_wrapper = $(".lt-swiper-wrapper");
 
+        this.imgsDiv = $(".lt-swiper-wrapper div");
         this.imgs = $(".lt-swiper-wrapper img");
 
         this.lt_swiper_show_image = $(".lt-swiper-show-image img");
@@ -58,7 +64,7 @@ class ltSwiper {
         })
     }
     imgSelected(element) {
-        $(element).addClass("selected").siblings().removeClass("selected");
+        $(element).addClass("selected").parent().siblings().children("img").removeClass("selected");
     }
     leftSlideOneImg(){
         let index = this.currindex;
