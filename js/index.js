@@ -1,7 +1,7 @@
 // import 'babel-polyfill';
-import "../font/base.css"
+// import "../font/base.css"
 import '../css/ltSwiper.scss';
-// import "normalize.css";
+import "normalize.css";
 // import "../../semantic/dist/semantic.css";
 import "layui-src/dist/css/layui.css";
 import "layui-src/dist/css/layui.mobile.css";

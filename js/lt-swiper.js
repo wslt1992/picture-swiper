@@ -1,4 +1,3 @@
-// ltSwiper.defaule = {}
 // Objcet.assign();
 
 class ltSwiper {
@@ -7,6 +6,7 @@ class ltSwiper {
     constructor(args) {
 
         this.init();
+        let c = Object.assign({},{a:"1"});
     }
 
     init() {
@@ -42,6 +42,7 @@ class ltSwiper {
      */
     initView() {
         this.showImage(this.imgs[0].src);
+        this.imgSelected(this.imgs[0]);
     }
     initOn() {
         // this.swiper_button_next.on('click');
@@ -60,7 +61,7 @@ class ltSwiper {
             this.imgSelected(a.target);
             this.showImage(src);
 
-            this.currindex  =$(a.target).index();
+            this.currindex  =$(a.target).parent().index();
         })
     }
     imgSelected(element) {
@@ -78,7 +79,7 @@ class ltSwiper {
         this.currindex = index;
 
         //相对于父的偏移
-        let position = $(this.imgs[index]).position();
+        let position = $(this.imgsDiv[index]).position();
         let currPosition = this.currPosition;
         //offsetParent - currPosition，但是currPosition为负数，所以取绝对值
         
@@ -86,7 +87,8 @@ class ltSwiper {
         //当前显示的区域左和右边的坐标
         let you = Math.abs(currPosition)+this.rootBaoguoWidth
         let zuo = Math.abs(currPosition);
-        if(position.left<=zuo){
+        //左不能判断为相等，左滑动判断相等   元素还在 区间内
+        if(position.left<zuo){
             this.leftSlide();
         }
         // else if(position.left>=you){
@@ -107,7 +109,7 @@ class ltSwiper {
        
         this.currindex = index;
 
-        let position = $(this.imgs[index]).position();
+        let position = $(this.imgsDiv[index]).position();
         let currPosition = this.currPosition;
         //offsetParent - currPosition，但是currPosition为负数，所以取绝对值
         
@@ -135,7 +137,7 @@ class ltSwiper {
     //计算图片包裹容器宽swiper_wrapper
     jisuanSwiper_wrapperWidth() {
         let self = this;
-        let oneImg = $(this.imgs[0]);
+        let oneImg = $(this.imgsDiv[0]);
         let length = this.imgs.length;
         let oneWidth = oneImg.outerWidth();
         let oneMargin = parseInt(oneImg.css('marginLeft'));
