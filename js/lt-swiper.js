@@ -145,7 +145,7 @@ class ltSwiper {
 
         //最大负max
         this.rootBaoguoWidth = this.baoguo.innerWidth();
-        this.fumax = this.rootBaoguoWidth - totalWidth;
+        this.fumax = this.rootBaoguoWidth - totalWidth?0:this.rootBaoguoWidth - totalWidth;//当个数小与7时，也就是个数少于一行，fumax会为"正数"，所以，为“正数”就改为0
         //最大max
         this.zhengmax = 0;
     }
@@ -208,11 +208,14 @@ class ltSwiper {
      */
     checkBoundaries(margin_left) {
         let num = -32768;
+        // if(this.imgs.length<=7){
+        //     num = 0;
+        // }else 
         if (margin_left < this.fumax) {
             num = this.fumax;
-        } else if (margin_left > this.zhengmax) {
+        }else if (margin_left > this.zhengmax) {
             num = this.zhengmax;
-        } else {
+        }else{
             num = margin_left;
         }
         return num;
