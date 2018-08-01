@@ -145,9 +145,14 @@ class ltSwiper {
 
         //最大负max
         this.rootBaoguoWidth = this.baoguo.innerWidth();
-        this.fumax = this.rootBaoguoWidth - totalWidth?0:this.rootBaoguoWidth - totalWidth;//当个数小与7时，也就是个数少于一行，fumax会为"正数"，所以，为“正数”就改为0
+        this.fumax = (this.rootBaoguoWidth - totalWidth)>0?0:this.rootBaoguoWidth - totalWidth;//当个数小与7时，也就是个数少于一行，fumax会为"正数"，所以，为“正数”就改为0
         //最大max
         this.zhengmax = 0;
+        if(0){
+            console.log(true)
+        }else{
+            console.log(false);
+        }
     }
     //1.左滑动
     leftSlide() {
@@ -258,5 +263,5 @@ class ltSwiper {
 
 export {
     ltSwiper
-};
+}
 $.fn.extend({"ltSwiper":ltSwiper});
